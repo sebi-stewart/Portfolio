@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8a0e1a30-e6f0-4792-bf3a-138e85c325b6" name="apachi" url="http://localhost/inventry">
+        <fileTransfer mountedRoot="$PROJECT_DIR$/../inventry" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
