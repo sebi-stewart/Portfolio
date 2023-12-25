@@ -6,7 +6,9 @@
 
   <base href="http://localhost:8888/">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -64,6 +66,7 @@
     Aliquam non ligula diam. Cras vitae sem neque. Curabitur aliquam erat nec condimentum porttitor. Praesent non semper
     nisi. Quisque in nisl quam.</p>
 
+  <?php include 'parts/footer.php';?>
 
 </body>
 </html>
