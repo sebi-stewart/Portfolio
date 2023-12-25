@@ -3,7 +3,7 @@
 
 ?>
 
-<footer>
+<footer id="contact-footer">
 
   <a class="foot-text">Connect with me</a>
 
