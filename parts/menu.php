@@ -14,5 +14,3 @@ if (!in_array($curr_page, $allow)){
         <li><a class="<?php if($curr_page == '/about.php'){echo 'nav-current';} ?>" href="http://localhost:8888/about">about_me.css</a></li>
     </ul>
 </nav>
-
-<br>

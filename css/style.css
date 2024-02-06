@@ -99,11 +99,42 @@ textarea {
 /*  =============================================
     GENERAL ELEMENTS
     =============================================*/
-body{
+body, p, h1{
   margin: 0;
 }
 
+/*  =============================================
+    LINE NUMBERS
+    =============================================
+ */
 
+div#main {
+  margin-top: 7vh;
+}
+
+div#main>div.text{
+  /*padding: 5px 0;*/
+}
+
+div#main>div.text>.line-entry{
+  display: inline-block;
+  width: calc(92% - 50px);
+}
+
+div#main>div.text>div.line-num{
+  display: inline-block;
+  text-align: right;
+  font-size: 90%;
+  color: rgb(130,132,138);
+  width: 8%;
+  margin-right:50px;
+}
+
+.indented>*{
+  padding-left: 19px;
+  border-left: 1px solid rgb(50, 52, 56);
+  width: calc(100% - 20px);
+}
 
 /*  =============================================
     HEADER ELEMENTS

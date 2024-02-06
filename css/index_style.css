@@ -1,0 +1,30 @@
+
+
+#intro{
+  color: inherit;
+  font-size:  inherit;
+}
+
+#name, #cursor{
+  color: white;
+  font-size:  400%;
+}
+
+#job{
+  color: rgb(132, 166, 185);
+  font-size:  150%;
+}
+
+#cursor{
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 100%;
+  }
+  50%{
+    opacity: 0;
+  }
+
+}
