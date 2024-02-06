@@ -104,24 +104,37 @@ body, p, h1{
 }
 
 /*  =============================================
+    COVER LOADING
+    =============================================*/
+#cover{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:0; left: 0;
+  background: rgb(30, 30, 30);
+  z-index:9999;
+}
+
+
+/*  =============================================
     LINE NUMBERS
     =============================================
  */
 
-div#main {
+div.main {
   margin-top: 7vh;
 }
 
-div#main>div.text{
+div.main>div.text{
   /*padding: 5px 0;*/
 }
 
-div#main>div.text>.line-entry{
+div.main>div.text>.line-entry{
   display: inline-block;
   width: calc(92% - 50px);
 }
 
-div#main>div.text>div.line-num{
+div.main>div.text>div.line-num{
   display: inline-block;
   text-align: right;
   font-size: 90%;

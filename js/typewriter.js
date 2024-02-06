@@ -6,9 +6,8 @@ function typeWriter (elementID) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  const SLEEP_TIME = 200;
+  const SLEEP_TIME = 225;
   const el = document.getElementById("name");
-  el.insertAdjacentHTML("afterend", "<span id=\"cursor\">|</span>");
 
   let modSleepTime = SLEEP_TIME;
   let currSleepTime;
@@ -25,16 +24,29 @@ function typeWriter (elementID) {
         currSleepTime += SLEEP_TIME;
         modSleepTime = SLEEP_TIME;
       } else{
-        modSleepTime += Math.floor(Math.random()*SLEEP_TIME) - modSleepTime/4*3;
+        modSleepTime += Math.floor(Math.random()*modSleepTime/6*7) - modSleepTime/4*3;
       }
 
       await sleep(currSleepTime);
     }
+    fadeOut("#cursor")
+
   };
 
   writeLoop();
 
-  let cursor = document.getElementById("cursor");
-  cursor.remove();
+}
 
+function fadeOut(element){
+  let el = $(element);
+  let interval = setInterval(function() {
+    let opacity = el.css('opacity');
+    if (opacity > 0){
+      opacity -= 0.02;
+      el.css('opacity', opacity);
+    } else{
+      el.remove();
+      clearInterval(interval);
+    }
+  }, 50);
 }

@@ -15,14 +15,22 @@ function heightFormatting(){
   exclHeadFoot.style.cssText = heightSeparators;
 }
 
-function setIndent(){
+function setIndent(includeLineNum = false){
 
+  let indentElements = document.getElementsByClassName("main");
+
+  for(let indentElement of indentElements){
+    setIndentItem(indentElement, includeLineNum);
+  }
+}
+
+function setIndentItem(body, includeLineNum = false){
   /*Get all our elements from our main section (ID) and the number each one of then
   * then in the before tag we add said number/line number */
 
-  let body = document.getElementById("main");
   let formBody = document.createElement("div");
   formBody.id = body.id;
+  formBody.className = body.className;
 
 
 
@@ -36,7 +44,9 @@ function setIndent(){
 
     lineNum = document.createElement("div");
     lineNum.className = "line-num";
-    lineNum.innerHTML = `${line}.`;
+    if (includeLineNum){
+      lineNum.innerHTML = `${line}.`;
+    }
 
     newChild = child.cloneNode(true);
 
@@ -73,10 +83,9 @@ function setIndent(){
   }
 
   body.replaceWith(formBody);
-
 }
 
-function runFormatting(){
+function runFormatting(includeLineNum = false){
   heightFormatting();
-  setIndent();
+  setIndent(includeLineNum);
 }

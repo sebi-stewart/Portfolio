@@ -12,12 +12,14 @@
 
   <script src="js/formatting.js"></script>
   <script src="js/typewriter.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
   <script>
     window.onload = function(){
-      runFormatting();
+      runFormatting(true);
+      $("#cover").hide();
 
-      const myTimeout = setTimeout(typeWriter, 500);
+      const myTimeout = setTimeout(typeWriter, 1000);
     }
   </script>
 
@@ -26,12 +28,13 @@
 
   <?php include 'parts/menu.php';?>
 
+  <?php include 'parts/cover.php';?>
+
   <div id="excl-head-foot">
 
     <!-- Page content -->
-    <div id="main">
+    <div class="main">
 
-      <p></p>
       <p></p>
       <p class="indent+1"></p>
 
@@ -49,7 +52,7 @@
       <p></p>
 
       <p class="indent+1" id="intro">Hello! I am</p>
-      <div><span id="name"></span></div>
+      <div><span id="name"></span><span id="cursor">|</span></div>
       <p id="job">I am a software engineer</p>
 
       <p class="indent-1"></p>
@@ -64,11 +67,8 @@
 
       <p class="indent-1"></p>
       <p></p>
-      <p></p>
 
       <p class="indent-1"></p>
-      <input type="button" onclick="typeWriter()" value="Ajouter" class="submission-button">
-
 
 
     </div>
