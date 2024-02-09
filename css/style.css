@@ -99,9 +99,11 @@ textarea {
 /*  =============================================
     GENERAL ELEMENTS
     =============================================*/
-body, p, h1{
+body, p, h1, h2{
   margin: 0;
 }
+
+
 
 /*  =============================================
     COVER LOADING
@@ -122,7 +124,7 @@ body, p, h1{
  */
 
 div.main {
-  margin-top: 7vh;
+  padding-top: 1vh;
 }
 
 div.main>div.text{
@@ -160,6 +162,8 @@ div.main>div.text>div.line-num{
   margin: 0;
   padding: 0;
   background-color: rgb(37, 37, 38);
+  box-shadow: 0 1px 10px rgb(20, 20, 20);
+  z-index: 2;
 
 }
 #nav-bar li {
@@ -201,6 +205,8 @@ div.main>div.text>div.line-num{
 #nav-bar li>a.nav-current{
   background-color: rgb(30, 30, 30);
   color: rgb(104, 141, 202);
+  box-shadow: 0 -3px 10px 4px rgb(20, 20, 20);
+  z-index: 1;
 }
 
 #nav-bar li>a.nav-current::after {
@@ -243,7 +249,7 @@ footer .foot-text{
   width: 1.2vw;
   text-align: center;
   text-decoration: none;
-
+  box-sizing: initial;
   border-radius: 5px;
 }
 

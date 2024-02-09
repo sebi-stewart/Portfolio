@@ -8,8 +8,9 @@ function heightFormatting(){
   const footHeight = foot.clientHeight;
 
   const heightSeparators = `
-    margin-top: ${headHeight}px;
+    margin-top: calc(${headHeight}px);
     margin-bottom: ${footHeight}px;
+    height: calc(100vh - ${footHeight}px - ${headHeight}px);
   `
 
   exclHeadFoot.style.cssText = heightSeparators;
